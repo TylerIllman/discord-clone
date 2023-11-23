@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import {
     Dialog,
     DialogContent,
@@ -21,6 +22,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { useEffect, useState } from "react";
+import { FileUpload } from "../file-upload";
+import { useRouter } from "next/navigation";
 
 const formSchema = z.object({
     name: z.string().min(1, { message: "Server name is required" }),
@@ -37,6 +40,8 @@ export const InitialModel = () => {
         },
     });
 
+    const router = useRouter();
+
     useEffect(() => {
         setIsMounted(true);
     }, []);
@@ -45,6 +50,13 @@ export const InitialModel = () => {
 
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         console.log(values);
+        try {
+            await axios.post("/api/server", values);
+
+            form.reset();
+            router.refresh();
+            window.location.reload(); 
+        }
     };
     if (!isMounted) {
         return null;
@@ -69,7 +81,21 @@ export const InitialModel = () => {
                     >
                         <div className="space-y-8 px-6">
                             <div className="flex items-center justify-center text-center">
-                                TODO image uplaod
+                                <FormField
+                                    control={form.control}
+                                    name="imageUrl"
+                                    render={({ field }) => (
+                                        <FormItem>
+                                            <FormControl>
+                                                <FileUpload
+                                                    endpoint="serverImage"
+                                                    value={field.value}
+                                                    onChange={field.onChange}
+                                                />
+                                            </FormControl>
+                                        </FormItem>
+                                    )}
+                                />
                             </div>
                             <FormField
                                 control={form.control}
