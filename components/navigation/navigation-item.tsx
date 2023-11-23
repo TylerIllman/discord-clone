@@ -15,15 +15,19 @@ export const NavigationItem = ({ id, imageUrl, name }: NavigationItemProps) => {
     const params = useParams();
     const router = useRouter();
 
+    const onClick = () => {
+        router.push(`/servers/${id}`);
+    };
+
     return (
         <ActionTooltip label={name} align="center" side="right">
             <button
-                onClick={() => router.push(`/channels/${id}`)}
+                onClick={onClick}
                 className="group relative flew items-center"
             >
                 <div
                     className={cn(
-                        "absolute left-0 bg-primary rounded-r-full transition-all w-[4px] top-[4px]", // NOTE I ADDED THE TOP-[4px] AS I DIDN'T LIKE ALIGNMENT. THIS MAY CAUSE AN ERROR
+                        "absolute left-0 bg-primary rounded-r-full transition-all w-[4px] top-[6px]", // NOTE I ADDED THE TOP-[4px] AS I DIDN'T LIKE ALIGNMENT. THIS MAY CAUSE AN ERROR
                         params?.serverId !== id && "group-hover:h-[20px]",
                         params?.serverId === id ? "h-[36px]" : "h-[8px]"
                     )}
