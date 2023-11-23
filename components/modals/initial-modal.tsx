@@ -55,7 +55,9 @@ export const InitialModel = () => {
 
             form.reset();
             router.refresh();
-            window.location.reload(); 
+            window.location.reload();
+        } catch (error) {
+            console.log(error);
         }
     };
     if (!isMounted) {
