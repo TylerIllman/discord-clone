@@ -10,7 +10,29 @@ import { useModal } from "@/hooks/use-modal-store";
 import { ServerWithMembersWithProfiles } from "@/types";
 import { ScrollArea } from "../ui/scroll-area";
 import { UserAvatar } from "../user-avatar";
-import { Shield, ShieldAlert, ShieldCheck } from "lucide-react";
+import {
+    Check,
+    Gavel,
+    Loader2,
+    MoreVertical,
+    Shield,
+    ShieldAlert,
+    ShieldCheck,
+    ShieldQuestion,
+} from "lucide-react";
+import { useState } from "react";
+
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuSeparator,
+    DropdownMenuSub,
+    DropdownMenuPortal,
+    DropdownMenuTrigger,
+    DropdownMenuSubTrigger,
+    DropdownMenuSubContent,
+} from "@/components/ui/dropdown-menu";
 
 const roleIconMap = {
     GUEST: null,
@@ -20,6 +42,7 @@ const roleIconMap = {
 
 export const MembersModal = () => {
     const { onOpen, isOpen, onClose, type, data } = useModal();
+    const [loadingId, setLoadingId] = useState("");
 
     const isModalOpen = isOpen && type === "members";
     const { server } = data as { server: ServerWithMembersWithProfiles };
@@ -51,6 +74,52 @@ export const MembersModal = () => {
                                     {member.profile.email}
                                 </p>
                             </div>
+                            {server.profileId !== member.profileId &&
+                                loadingId !== member.id && (
+                                    <div className="ml-auto">
+                                        <DropdownMenu>
+                                            <DropdownMenuTrigger>
+                                                <MoreVertical className="h-4 w-4 text-zinc-500" />
+                                            </DropdownMenuTrigger>
+                                            <DropdownMenuContent side="left">
+                                                <DropdownMenuSub>
+                                                    <DropdownMenuSubTrigger className="flex items-center">
+                                                        <ShieldQuestion className="w-4 h-4 mr-2" />
+                                                        <span>Change Role</span>
+                                                    </DropdownMenuSubTrigger>
+                                                    <DropdownMenuPortal>
+                                                        <DropdownMenuSubContent>
+                                                            <DropdownMenuItem>
+                                                                <Shield className="h-4 w-4 mr-2" />
+                                                                Guest
+                                                                {member.role ===
+                                                                    "GUEST" && (
+                                                                    <Check className="h-4 w-4 ml-auto" />
+                                                                )}
+                                                            </DropdownMenuItem>
+                                                            <DropdownMenuItem>
+                                                                <ShieldCheck className="h-4 w-4 mr-2" />
+                                                                Moderator
+                                                                {member.role ===
+                                                                    "MODERATOR" && (
+                                                                    <Shield className="h-4 w-4 ml-auto" />
+                                                                )}
+                                                            </DropdownMenuItem>
+                                                        </DropdownMenuSubContent>
+                                                    </DropdownMenuPortal>
+                                                </DropdownMenuSub>
+                                                <DropdownMenuSeparator />
+                                                <DropdownMenuItem>
+                                                    <Gavel className="h-4 w-4 mr-2" />
+                                                    Kick
+                                                </DropdownMenuItem>
+                                            </DropdownMenuContent>
+                                        </DropdownMenu>
+                                    </div>
+                                )}
+                            {loadingId === member.id && (
+                                <Loader2 className="animate-spin text-zinc-500 ml-auto w-4 h-4" />
+                            )}
                         </div>
                     ))}
                 </ScrollArea>
