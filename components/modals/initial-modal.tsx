@@ -51,7 +51,7 @@ export const InitialModel = () => {
     const onSubmit = async (values: z.infer<typeof formSchema>) => {
         console.log(values);
         try {
-            await axios.post("/api/server", values);
+            await axios.post("/api/servers", values);
 
             form.reset();
             router.refresh();
