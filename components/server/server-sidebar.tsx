@@ -57,7 +57,6 @@ export const ServerSideBar = async ({ serverId }: ServerSideBarProps) => {
             },
         },
     });
-
     const textChannels = server?.channels.filter(
         (channel) => channel.type === ChannelType.TEXT
     );
