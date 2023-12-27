@@ -37,6 +37,8 @@
     "react-hook-form": "^7.48.2",
     "separator": "^0.1.0",
     "shadcn-ui": "^0.4.1",
+    "socket.io": "^4.7.2",
+    "socket.io-client": "^4.7.2",
     "tailwind-merge": "^2.0.0",
     "tailwindcss-animate": "^1.0.7",
     "tooltip": "^1.6.1",
