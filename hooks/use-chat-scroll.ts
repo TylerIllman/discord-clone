@@ -58,7 +58,7 @@ export const useChatScroll = ({
             setTimeout(() => {
                 bottomRef.current?.scrollIntoView({ behavior: "smooth" })   
             }, 100)
-        }
+        } 
 
     })
 }
