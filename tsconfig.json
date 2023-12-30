@@ -34,7 +34,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts"
-  ],
+, "pages/api/socket/direct-messages"  ],
   "exclude": [
     "node_modules"
   ]
