@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎮 Disco Chat
+Disco Chat is a user-friendly platform that lets you interact with other users through servers, direct messages, video calls and more.
 
-## Getting Started
+<p align="center">
+<img width="70%" alt="Discord-Clone Home Page" src="https://github.com/YourUsername/discord-clone/assets/homepage.png">
+</p>
 
-First, run the development server:
+# Features
+### User Dashboard
+The platform allows each user to have their own dashboard. Here, all the servers they've joined are displayed. This personal space serves as a hub for their chat rooms and collaborations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<p align="center">
+  <img width="70%" alt="User Dashboard" src="https://github.com/YourUsername/discord-clone/assets/user-dashboard.png">
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Chat Room Page
+At the core of Discord-Clone is the chat room page, this page allows you to chat directly with other users.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+<p align="center">
+  <img width="70%" alt="Chat Room Page" src="https://github.com/YourUsername/discord-clone/assets/chat-room.png">
+</p>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Technical Details
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=nextjs,planetscale,tailwind,react,typescript,prisma" />
+</p>
 
-## Learn More
+Discord-Clone utilises a modern tech stack and infrastructure including: Next.js, Planetscale, Tailwind, React, Typescript, and Prisma.
 
-To learn more about Next.js, take a look at the following resources:
+### Next.js for Frontend
+The application is built using Next.js, offering a flexible and high-performance framework for the web frontend.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Planetscale for Performance and Scalability
+Planetscale supports the backend with its scalable, serverless database platform, ensuring that Discord-Clone remains responsive and efficient as its user base grows.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Tailwind for Styling
+Tailwind CSS is used for styling the application. It's a utility-first CSS framework that is highly customizable and helps in building modern and responsive interfaces.
 
-## Deploy on Vercel
+### React and TypeScript for Robust Development
+React is used for building the user interface components in a maintainable and efficient way. TypeScript is used to ensure type safety, enhancing the overall stability of the application.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Prisma for Database Management
+Prisma is used for efficient database management. Its role as an ORM tool simplifies database queries and schema management. Prisma's auto-generated types are particularly beneficial, enhancing the app’s type safety.
