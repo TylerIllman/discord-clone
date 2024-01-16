@@ -1,5 +1,6 @@
 # 💃 Disco Chat
 Disco Chat is a user-friendly platform that lets you interact with other users through servers, direct messages, video calls and more.
+Checkout Disco Chat here: https://discochat.tyleri.dev
 
 <p align="center">
   <img width="70%" alt="Discord-Clone Home Page" src="https://github.com/TylerIllman/discord-clone/assets/124550621/9be0c160-486f-4be6-b13f-69db9e88597b">
