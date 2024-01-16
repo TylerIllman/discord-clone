@@ -1,24 +1,22 @@
-# 🎮 Disco Chat
+# 💃 Disco Chat
 Disco Chat is a user-friendly platform that lets you interact with other users through servers, direct messages, video calls and more.
 
 <p align="center">
-<img width="70%" alt="Discord-Clone Home Page" src="https://github.com/YourUsername/discord-clone/assets/homepage.png">
+  <img width="70%" alt="Discord-Clone Home Page" src="https://github.com/TylerIllman/discord-clone/assets/124550621/9be0c160-486f-4be6-b13f-69db9e88597b">
 </p>
 
 # Features
-### User Dashboard
-The platform allows each user to have their own dashboard. Here, all the servers they've joined are displayed. This personal space serves as a hub for their chat rooms and collaborations.
+### Live Video Chats
+Disco Chat offers live video chat functionality, allowing users to connect visually in real-time. These video chats enhance the interaction, making conversations more personal and engaging.
 
-<p align="center">
-  <img width="70%" alt="User Dashboard" src="https://github.com/YourUsername/discord-clone/assets/user-dashboard.png">
-</p>
+### Audio Channels
+Users can join audio channels within various servers. These channels are perfect for voice communication, group discussions, and collaborative sessions, providing a seamless audio experience.
 
-### Chat Room Page
-At the core of Discord-Clone is the chat room page, this page allows you to chat directly with other users.
+### Direct Messages
+For more private conversations, Disco Chat supports direct messaging. This feature allows users to communicate one-on-one, fostering closer and more personal interactions.
 
-<p align="center">
-  <img width="70%" alt="Chat Room Page" src="https://github.com/YourUsername/discord-clone/assets/chat-room.png">
-</p>
+### Servers
+Servers are the heart of Disco Chat, acting as dedicated spaces for groups. Each server can host multiple channels (both text and voice), catering to different topics, communities, or teams. They provide a structured way for users to engage and collaborate.
 
 # Technical Details
 <p align="center">
